@@ -1,0 +1,48 @@
+import csv
+filename="survey.csv"
+
+#with open(filename,'a') as f:
+    
+    #f.write('age,')
+    #f.write('gender,')
+    #f.write('genre,')
+    #f.write('movie,')
+    #f.write('country\n')
+    
+    class survey:
+    def write(survey):
+        with open("survey.csv",'a',newline='') as f:
+            write=csv.writer(f)
+            write.writerow(survey)
+            
+    def __init__(self,age,gender,genre,movie,country):
+        self.age=age
+        self.gender=gender
+        self.genre=genre
+        self.movie=movie
+        self.country=country
+        print(self.age,self.gender,self.genre,self.movie,self.country)
+        surveys=[]
+        surveys.append(self.age)
+        surveys.append(self.gender)
+        surveys.append(self.genre)
+        surveys.append(self.movie)
+        surveys.append(self.country)
+        survey.write(surveys)
+        print("")   
+        
+            
+    def read():
+        survey=[]
+        with open(filename,newline='') as f:
+            read=csv.reader(f)
+            for row in read:
+                survey.append(row)
+        return survey
+    
+    def sort():
+        x=survey.read()
+        del x[0]
+        x.sort()
+        return x
+     
